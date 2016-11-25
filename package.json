@@ -1,9 +1,9 @@
 {
-  "name": "morris.js",
-  "version": "0.5.1",
+  "name": "morris-js-module",
+  "version": "0.6.0",
   "homepage": "http://morrisjs.github.com/morris.js",
   "license": "BSD-2-Clause",
-  "description": "Easy, pretty charts",
+  "description": "Easy, pretty charts. Forked from original repository. Uses export instead of window",
   "author": {
     "name": "Olly Smith",
     "email": "olly@oesmith.co.uk"

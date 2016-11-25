@@ -1,9 +1,10 @@
+
 /* @license
 morris.js v0.5.1
 Copyright 2014 Olly Smith All rights reserved.
 Licensed under the BSD-2-Clause License.
 */
-
+const Morris = {};
 
 (function() {
   var $, Morris, minutesSpecHelper, secondsSpecHelper,
@@ -13,7 +14,6 @@ Licensed under the BSD-2-Clause License.
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  Morris = window.Morris = {};
 
   $ = jQuery;
 
@@ -155,9 +155,9 @@ Licensed under the BSD-2-Clause License.
       if (this.options.resize) {
         $(window).bind('resize', function(evt) {
           if (_this.timeoutId != null) {
-            window.clearTimeout(_this.timeoutId);
+            clearTimeout(_this.timeoutId);
           }
-          return _this.timeoutId = window.setTimeout(_this.resizeHandler, 100);
+          return _this.timeoutId = setTimeout(_this.resizeHandler, 100);
         });
       }
       this.el.css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
@@ -1883,9 +1883,9 @@ Licensed under the BSD-2-Clause License.
       if (this.options.resize) {
         $(window).bind('resize', function(evt) {
           if (_this.timeoutId != null) {
-            window.clearTimeout(_this.timeoutId);
+            clearTimeout(_this.timeoutId);
           }
-          return _this.timeoutId = window.setTimeout(_this.resizeHandler, 100);
+          return _this.timeoutId = setTimeout(_this.resizeHandler, 100);
         });
       }
       this.setData(options.data);
@@ -2111,3 +2111,5 @@ Licensed under the BSD-2-Clause License.
   })(Morris.EventEmitter);
 
 }).call(this);
+
+export default Morris;
