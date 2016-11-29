@@ -4,10 +4,11 @@ morris.js v0.5.1
 Copyright 2014 Olly Smith All rights reserved.
 Licensed under the BSD-2-Clause License.
 */
-const Morris = {};
 
-(function() {
-  var $, Morris, minutesSpecHelper, secondsSpecHelper,
+
+function makeMorris(jQuery) {
+  const Morris = {};
+  var $, minutesSpecHelper, secondsSpecHelper,
     __slice = [].slice,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
@@ -2110,6 +2111,7 @@ const Morris = {};
 
   })(Morris.EventEmitter);
 
-}).call(this);
+  return Morris;
+}
 
-export default Morris;
+module.exports = makeMorris;
