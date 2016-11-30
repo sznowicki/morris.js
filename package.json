@@ -1,6 +1,6 @@
 {
   "name": "morris-js-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://morrisjs.github.com/morris.js",
   "license": "BSD-2-Clause",
   "description": "Easy, pretty charts. Forked from original repository. Uses node module export instead of window. Original morris.js package version: 0.6.1",
