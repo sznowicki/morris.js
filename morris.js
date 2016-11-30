@@ -1,4 +1,4 @@
-import Raphael from 'raphael';
+const Raphael = require('raphael');
 /* @license
 morris.js v0.5.1
 Copyright 2014 Olly Smith All rights reserved.
