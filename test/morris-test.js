@@ -21,7 +21,7 @@ const propertiesRequired = [
   'DonutSegment',
 
 ];
-describe('Export test', function() {
+describe('Export test', () => {
   it('should have all plugin properties', () => {
     propertiesRequired.forEach((name) => {
       console.log(name);
