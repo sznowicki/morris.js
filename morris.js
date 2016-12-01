@@ -1857,6 +1857,7 @@ function makeMorris(jQuery) {
       backgroundColor: '#FFFFFF',
       labelColor: '#000000',
       formatter: Morris.commas,
+      showPercentage: false,
       resize: false
     };
 
@@ -1959,6 +1960,7 @@ function makeMorris(jQuery) {
     };
 
     Donut.prototype.select = function(idx) {
+      let finalValue;
       /*
        * Deselects all when idx is not provided
        * without triggering error
@@ -1979,8 +1981,17 @@ function makeMorris(jQuery) {
       segment = this.segments[idx];
       segment.select();
       row = this.data[idx];
-      return this.setLabels(row.label, this.options.formatter(row.value, row));
+      finalValue = this.options.formatter(row.value, row);
+      if (this.options.showPercentage) {
+        let overall = 0;
+        this.data.forEach((dataRow) => {
+          overall += dataRow.value;
+        });
+        finalValue = Math.round(row.value / overall * 100) + '%';
+      }
+      return this.setLabels(row.label, finalValue);
     };
+
 
     Donut.prototype.setLabels = function(label1, label2) {
       var inner, maxHeightBottom, maxHeightTop, maxWidth, text1bbox, text1scale, text2bbox, text2scale;
