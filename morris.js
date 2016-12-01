@@ -1959,6 +1959,17 @@ function makeMorris(jQuery) {
     };
 
     Donut.prototype.select = function(idx) {
+      /*
+       * Deselects all when idx is not provided
+       * without triggering error
+       */
+      if (typeof idx === 'undefined') {
+        this.segments.forEach((segment) => {
+          segment.deselect();
+        });
+
+        return;
+      }
       var row, s, segment, _i, _len, _ref;
       _ref = this.segments;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
