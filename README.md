@@ -1,4 +1,9 @@
-# Morris.js - pretty time-series line graphs
+# Morris.js - pretty time-series line graphs - forked from morris.js package
+
+## Changes against original repository:
+### Donut option {showPercentage: {boolean}}
+You can init Donut with additional option Morris.Donut({showPercentage: true}) to show percentages instead of absolute values in second donut label.
+ 
 
 [![Build Status](https://secure.travis-ci.org/morrisjs/morris.js.png?branch=master)](http://travis-ci.org/morrisjs/morris.js)
 
